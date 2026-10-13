@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--next-font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Countdown prelaunch page (MoMorph 8PJQswPZmU) design tokens.
+     --next-font-* are set by next/font in app/layout.tsx. */
+  --font-montserrat: var(--next-font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-digital-numbers: var(--next-font-digital-numbers), ui-monospace, monospace;
+  --color-countdown-bg: #00101a;
+  --color-countdown-digit-border: #ffea9e;
+
+  /* Login page (MoMorph GzbNeVGJHz) design tokens. */
+  --color-login-bg: #00101a;
+  --color-login-header-bg: rgb(11 15 18 / 0.8);
+  --color-login-accent: #ffea9e;
+  --color-login-divider: #2e3940;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
